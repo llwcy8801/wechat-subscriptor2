@@ -42,24 +42,24 @@ const computed={
 }
 
 const methods={
-  switchFun(obj,key){
+  switchFun:function(obj,key){
     key==1?document.querySelector('.show-collection-switch').style.transform='rotate(90deg)':document.querySelector('.show-collection-switch').style.transform='rotate(0deg)'
     return obj.collectionSwitch=key
   },
-  showCollection(){
+  showCollection:function(){
     this.collectionSwitch==0?this.switchFun(this,1):this.switchFun(this,0)
   },
-  showEdit(){
+  showEdit:function(){
     this.editSwitch===0?this.editSwitch=1:this.editSwitch=0
   },
-  setKeyword(key){
+  setKeyword:function(key){
     if(key===0){
       this.$store.dispatch('searchFun',this.keyword)
     }else{
       this.$store.dispatch('searchFun',key)
     }
   },
-  oprateItem(name){
+  oprateItem:function(name){
     if(this.editSwitch===0){
       this.setKeyword(name)
       document.querySelector('.show-collection-switch').click()

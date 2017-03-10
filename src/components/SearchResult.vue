@@ -22,16 +22,16 @@
 
 <script>
 const computed={
-  searchResult(){
+  searchResult:function(){
     return this.$store.getters.searchResult
   },
-  collectItems(){
+  collectItems:function(){
     return this.$store.getters.collectItem
   }
 }
 
 const methods={
-  collectIt(name,collectArr){
+  collectIt:function(name,collectArr){
     let collect={name,collectArr}
     this.$store.dispatch('collectIt',collect)
   }

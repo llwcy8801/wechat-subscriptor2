@@ -1,9 +1,9 @@
 //getters
 const getters={
-	wordVaule(state,getters,rootState){
+	wordVaule:function(state,getters,rootState){
 		return rootState.keyword
 	},
-	searchResult(state,getters,rootState){
+	searchResult:function(state,getters,rootState){
 		return rootState.searchResult
 	}
 }
